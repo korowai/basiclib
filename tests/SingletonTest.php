@@ -1,21 +1,20 @@
 <?php
-/**
- * @file Tests/SingletonTest.php
+
+/*
+ * This file is part of Korowai framework.
  *
- * This file is part of the Korowai package
+ * (c) Paweł Tomulik <ptomulik@meil.pw.edu.pl>
  *
- * @author Paweł Tomulik <ptomulik@meil.pw.edu.pl>
- * @package korowai\basiclib
- * @license Distributed under MIT license.
+ * Distributed under MIT license.
  */
 
 declare(strict_types=1);
 
-namespace Korowai\Lib\Basic\Tests;
+namespace Korowai\Tests\Lib\Basic;
 
 use Korowai\Lib\Basic\Singleton;
 
-use PHPUnit\Framework\TestCase;
+use Korowai\Testing\TestCase;
 
 class SingletonC91F82BJ
 {
@@ -43,7 +42,7 @@ class SingletonTest extends TestCase
 
     protected function getClassUnderTest()
     {
-       return SingletonC91F82BJ::class;
+        return SingletonC91F82BJ::class;
     }
 
     public function test__initializeSingleton()

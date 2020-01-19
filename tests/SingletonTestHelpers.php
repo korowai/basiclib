@@ -1,17 +1,16 @@
 <?php
-/**
- * @file Tests/SingletonTestHelpers.php
+
+/*
+ * This file is part of Korowai framework.
  *
- * This file is part of the Korowai package
+ * (c) Paweł Tomulik <ptomulik@meil.pw.edu.pl>
  *
- * @author Paweł Tomulik <ptomulik@meil.pw.edu.pl>
- * @package korowai\basiclib
- * @license Distributed under MIT license.
+ * Distributed under MIT license.
  */
 
 declare(strict_types=1);
 
-namespace Korowai\Lib\Basic\Tests;
+namespace Korowai\Tests\Lib\Basic;
 
 /**
  * @author Paweł Tomulik <ptomulik@meil.pw.edu.pl>
@@ -34,7 +33,7 @@ trait SingletonTestHelpers
     {
         $regex = self::getPrivateErrorRegExp($class . '::__construct()');
         $this->expectException(\Error::class);
-        $this->expectExceptionMessageRegExp($regex);
+        $this->expectExceptionMessageMatches($regex);
 
         new $class();
     }
@@ -46,7 +45,7 @@ trait SingletonTestHelpers
         $regex = self::getPrivateErrorRegExp(get_class($obj) . '::__clone()');
 
         $this->expectException(\Error::class);
-        $this->expectExceptionMessageRegExp($regex);
+        $this->expectExceptionMessageMatches($regex);
 
         $obj->__clone();
     }
@@ -58,7 +57,7 @@ trait SingletonTestHelpers
         $regex = self::getPrivateErrorRegExp(get_class($obj) . '::__wakeup()');
 
         $this->expectException(\Error::class);
-        $this->expectExceptionMessageRegExp($regex);
+        $this->expectExceptionMessageMatches($regex);
 
         $obj->__wakeup();
     }

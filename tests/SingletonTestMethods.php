@@ -1,17 +1,16 @@
 <?php
-/**
- * @file Tests/SingletonTestMethods.php
+
+/*
+ * This file is part of Korowai framework.
  *
- * This file is part of the Korowai package
+ * (c) Paweł Tomulik <ptomulik@meil.pw.edu.pl>
  *
- * @author Paweł Tomulik <ptomulik@meil.pw.edu.pl>
- * @package korowai\basiclib
- * @license Distributed under MIT license.
+ * Distributed under MIT license.
  */
 
 declare(strict_types=1);
 
-namespace Korowai\Lib\Basic\Tests;
+namespace Korowai\Tests\Lib\Basic;
 
 /**
  * @author Paweł Tomulik <ptomulik@meil.pw.edu.pl>
